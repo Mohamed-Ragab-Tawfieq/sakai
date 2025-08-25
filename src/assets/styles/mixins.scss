@@ -1,0 +1,24 @@
+@mixin bg($width, $height, $border-radius, $bg) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: $width + px;
+    height: $height + px;
+    flex-shrink: 0;
+
+    border-radius: $border-radius + px;
+    background-color: $bg;
+}
+
+@mixin title($size, $weight, $color) {
+    font-size: $size;
+    font-weight: $weight;
+    color: $color;
+}
+
+@mixin divider($width, $height, $bg) {
+    width: $width + px;
+    height: $height + px;
+    background-color: $bg;
+}

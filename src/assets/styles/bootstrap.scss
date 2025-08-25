@@ -1,0 +1,28 @@
+.modal {
+    opacity: 0;
+
+    &.fade {
+        .modal-dialog {
+            transition: translate 0.3s ease-out;
+            translate: 0 -50px;
+        }
+    }
+
+    &.show {
+        opacity: 1;
+
+        .modal-dialog {
+            transition: translate 0.3s ease-out;
+            translate: 0;
+        }
+    }
+
+    .modal-dialog {
+        transition: translate 0.3s ease-out;
+        translate: 0;
+    }
+
+    .modal-content {
+        background-color: var(--white);
+    }
+}
