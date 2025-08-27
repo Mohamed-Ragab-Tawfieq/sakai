@@ -3,23 +3,45 @@
     --black: #000;
 }
 
-// @font-face {
-//     font-family: "Almarai";
-//     src:
-//         url("../fonts/almarai-regular.woff2") format("woff2"),
-//         url("../fonts/almarai-regular.woff") format("woff");
-//     font-weight: normal;
-//     font-style: normal;
-// }
+@font-face {
+    font-family: "Public Sans Light";
+    src: url("../fonts/PublicSans-Light.ttf") format("truetype");
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
 
-// @font-face {
-//     font-family: "Almarai";
-//     src:
-//         url("../fonts/almarai-bold.woff2") format("woff2"),
-//         url("../fonts/almarai-bold.woff") format("woff");
-//     font-weight: 700;
-//     font-style: normal;
-// }
+@font-face {
+    font-family: "Public Sans Medium";
+    src: url("../fonts/PublicSans-Medium.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Public Sans Regular";
+    src: url("../fonts/PublicSans-Regular.ttf") format("truetype");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Public Sans SemiBold";
+    src: url("../fonts/PublicSans-SemiBold.ttf") format("truetype");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Public Sans Bold";
+    src: url("../fonts/PublicSans-Bold.ttf") format("truetype");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
 
 * {
     box-sizing: border-box;
@@ -37,7 +59,7 @@ html {
 
 body {
     font-size: 16px !important;
-    font-family: "Almarai", sans-serif !important;
+    font-family: "Public Sans", sans-serif !important;
 
     text-align: start;
     min-height: 100vh;
