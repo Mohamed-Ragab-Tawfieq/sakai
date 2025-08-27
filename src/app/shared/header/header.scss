@@ -1,0 +1,62 @@
+@use "assets/styles/mixins.scss";
+
+.main-header {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: 32px;
+
+    background-color: var(--white);
+    border-bottom: 1px solid #e9eaeb;
+    padding-block: 9px;
+
+    .notifications-btn {
+        position: relative;
+
+        .bg {
+            @include mixins.bg(18, 18, 9, #be4949);
+
+            color: var(--white);
+
+            font-size: 0.81rem;
+            font-weight: 600;
+
+            position: absolute;
+            top: -10px;
+            inset-inline-end: -4px;
+        }
+    }
+
+    .dropdown {
+        .profile-btn {
+            border: 1px solid #e9eaeb;
+            border-radius: 12px;
+
+            padding: 12px;
+
+            display: flex;
+            align-items: center;
+            gap: 8px;
+
+            &::after {
+                content: none;
+            }
+        }
+
+        .wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            font-size: 0.88rem;
+        }
+
+        .title {
+            color: #181d27;
+            font-weight: 600;
+        }
+
+        .description {
+            color: #181d27;
+        }
+    }
+}
