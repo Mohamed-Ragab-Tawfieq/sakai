@@ -94,3 +94,13 @@
     align-items: center;
     flex-direction: column;
 }
+
+.error-msg {
+    color: var(--danger);
+    font-size: 0.88rem;
+}
+
+.success-btn {
+    color: var(--white);
+    background-color: var(--success);
+}

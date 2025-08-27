@@ -1,7 +1,11 @@
 :root {
     --white: #fff;
     --black: #000;
+
     --success: #17b26a;
+    --success-dark: #1b8354;
+    --danger: #d92d20;
+
     --secondary: #414651;
     --gray: #e9eaeb;
 }
@@ -130,6 +134,7 @@ svg {
 }
 
 p {
+    margin: 0;
     margin-bottom: 0;
     line-height: 1.5rem;
 }
@@ -173,9 +178,12 @@ textarea {
 }
 
 .form-label {
-    display: inline-block;
-    margin-bottom: 0.5rem;
+    font-size: 0.88rem;
     font-weight: 500;
+
+    display: inline-block;
+    color: var(--secondary);
+    margin-bottom: 6px;
 
     &.required {
         &::after {

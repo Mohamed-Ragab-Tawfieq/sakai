@@ -1,0 +1,9 @@
+.form-control {
+    height: 44px;
+
+    &.invalid {
+        background: url("https://picsum.photos/id/11/1000") no-repeat calc(100% - 14px) / 16px;
+        border-color: #fda29b;
+        box-shadow: 0px 1px 2px 0px rgba(0 0 0 / 5%);
+    }
+}
