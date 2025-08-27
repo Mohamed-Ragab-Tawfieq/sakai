@@ -1,0 +1,67 @@
+@use "mixins.scss";
+@forward "_helpers.scss";
+
+.stepper {
+    position: relative;
+    padding: 12px;
+    background-color: var(--white);
+    border-radius: 12px;
+    text-align: center;
+
+    .wrapper {
+        @extend .flex-center;
+        position: relative;
+        width: fit-content;
+        margin: auto;
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: 16px;
+
+            height: 2px;
+            width: calc(100% - 250px);
+
+            background: url("https://picsum.photos/id/11/1000") no-repeat center / cover;
+        }
+    }
+
+    .item {
+        min-width: 252px;
+
+        &.active,
+        &.active ~ .item {
+            .number {
+                background: var(--white);
+                border: 1px solid #e9eaeb;
+            }
+        }
+
+        &.active {
+            & ~ .item {
+                opacity: 0.6;
+            }
+        }
+    }
+
+    .number {
+        @include mixins.bg(32, 32, 16, #079455);
+        background: url("https://picsum.photos/id/11/1000") no-repeat center / cover;
+        color: var(--secondary);
+
+        font-size: 0.88rem;
+        font-weight: 600;
+        margin: auto;
+    }
+
+    .title {
+        font-size: 1rem;
+        font-weight: 600;
+        color: var(--secondary);
+        margin-block: 16px 2px;
+    }
+
+    .description {
+        color: #535862;
+    }
+}

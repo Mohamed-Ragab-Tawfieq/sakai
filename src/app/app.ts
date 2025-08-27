@@ -4,10 +4,11 @@ import { Sidebar } from "./shared/sidebar/sidebar";
 import { Header } from './shared/header/header';
 import { Login } from "./features/login/pages/login/login";
 import { Filters } from "./shared/filters/filters";
+import { Stepper } from "./shared/stepper/stepper";
 
 @Component({
     selector: 'app-root',
-    imports: [RouterOutlet, Sidebar, Header, Login, Filters],
+    imports: [RouterOutlet, Sidebar, Header, Login, Filters, Stepper],
     templateUrl: './app.html',
     styleUrl: './app.scss'
 })
