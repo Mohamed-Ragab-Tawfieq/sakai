@@ -1,0 +1,22 @@
+.filters-list {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-block: 30px;
+
+    .form-control {
+        display: flex;
+        gap: 4px;
+
+        padding: 6px 14px;
+        color: var(--secondary);
+
+        height: 40px;
+        width: auto;
+    }
+
+    ul {
+        display: flex;
+        gap: 1rem;
+    }
+}
