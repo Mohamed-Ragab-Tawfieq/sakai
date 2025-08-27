@@ -1,4 +1,4 @@
-@use "assets/styles/mixins.scss";
+@use "mixins.scss";
 
 .main-header {
     display: flex;
@@ -7,7 +7,7 @@
     gap: 32px;
 
     background-color: var(--white);
-    border-bottom: 1px solid #e9eaeb;
+    border-bottom: 1px solid var(--gray);
     padding-block: 9px;
 
     .notifications-btn {
@@ -29,7 +29,7 @@
 
     .dropdown {
         .profile-btn {
-            border: 1px solid #e9eaeb;
+            border: 1px solid var(--gray);
             border-radius: 12px;
 
             padding: 12px;
@@ -44,6 +44,18 @@
         }
 
         .wrapper {
+            position: relative;
+
+            .bg {
+                @include mixins.bg(10, 10, 5, var(--success));
+
+                position: absolute;
+                bottom: 0;
+                inset-inline-end: 4px;
+            }
+        }
+
+        .info {
             display: flex;
             flex-direction: column;
             align-items: start;

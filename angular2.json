@@ -3,7 +3,7 @@
     "version": 1,
     "newProjectRoot": "projects",
     "projects": {
-        "sakai": {
+        "najm-portal": {
             "projectType": "application",
             "schematics": {
                 "@schematics/angular:component": {
@@ -15,34 +15,42 @@
             "prefix": "app",
             "architect": {
                 "build": {
-                    "builder": "@angular/build:application",
+                    "builder": "@angular-devkit/build-angular:application",
                     "options": {
+                        "outputPath": "dist/najm-portal",
+                        "index": "src/index.html",
                         "browser": "src/main.ts",
                         "polyfills": [
-                            "zone.js",
-                            "@angular/localize/init"
+                            "zone.js"
                         ],
                         "tsConfig": "tsconfig.app.json",
                         "inlineStyleLanguage": "scss",
                         "assets": [
-                            "src/assets"
+                            "src/favicon.ico",
+                            "src/assets",
+                            "src/app/core/configurations/shared.config.ts"
                         ],
                         "styles": [
-                            "src/styles.scss"
-                        ]
+                            "node_modules/ngx-toastr/toastr.css",
+                            "node_modules/ngx-owl-carousel-o/lib/styles/prebuilt-themes/owl.carousel.min.css",
+                            "node_modules/ngx-owl-carousel-o/lib/styles/prebuilt-themes/owl.theme.default.min.css",
+                            "src/assets/styles/bootstrap.scss",
+                            "src/assets/styles/main.scss"
+                        ],
+                        "scripts": []
                     },
                     "configurations": {
                         "production": {
                             "budgets": [
                                 {
                                     "type": "initial",
-                                    "maximumWarning": "500kB",
-                                    "maximumError": "1MB"
+                                    "maximumWarning": "5000kb",
+                                    "maximumError": "1mb"
                                 },
                                 {
                                     "type": "anyComponentStyle",
-                                    "maximumWarning": "4kB",
-                                    "maximumError": "8kB"
+                                    "maximumWarning": "2kb",
+                                    "maximumError": "4000kb"
                                 }
                             ],
                             "outputHashing": "all"
@@ -56,42 +64,46 @@
                     "defaultConfiguration": "production"
                 },
                 "serve": {
-                    "builder": "@angular/build:dev-server",
+                    "builder": "@angular-devkit/build-angular:dev-server",
                     "configurations": {
                         "production": {
-                            "buildTarget": "sakai:build:production"
+                            "buildTarget": "najm-portal:build:production"
                         },
                         "development": {
-                            "buildTarget": "sakai:build:development"
+                            "buildTarget": "najm-portal:build:development"
                         }
                     },
                     "defaultConfiguration": "development"
                 },
                 "extract-i18n": {
-                    "builder": "@angular/build:extract-i18n"
+                    "builder": "@angular-devkit/build-angular:extract-i18n",
+                    "options": {
+                        "buildTarget": "najm-portal:build"
+                    }
                 },
                 "test": {
-                    "builder": "@angular/build:karma",
+                    "builder": "@angular-devkit/build-angular:karma",
                     "options": {
                         "polyfills": [
                             "zone.js",
-                            "zone.js/testing",
-                            "@angular/localize/init"
+                            "zone.js/testing"
                         ],
                         "tsConfig": "tsconfig.spec.json",
                         "inlineStyleLanguage": "scss",
                         "assets": [
-                            {
-                                "glob": "**/*",
-                                "input": "public"
-                            }
+                            "src/favicon.ico",
+                            "src/assets"
                         ],
                         "styles": [
                             "src/styles.scss"
-                        ]
+                        ],
+                        "scripts": []
                     }
                 }
             }
         }
+    },
+    "cli": {
+        "analytics": false
     }
 }
