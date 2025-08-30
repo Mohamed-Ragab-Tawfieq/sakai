@@ -1,0 +1,29 @@
+ol {
+    display: flex;
+    font-size: var(--text-sm);
+    color: #9da4ae;
+
+    padding-block: 1rem;
+    padding-inline-start: 0;
+
+    li {
+        display: flex;
+        align-items: center;
+
+        &:first-of-type {
+            padding-inline-end: 10px;
+        }
+
+        & + li ~ li {
+            &::before {
+                content: url("assets/images/icons/chevron-down.svg");
+                rotate: -90deg;
+                margin-inline: 8px 2px;
+            }
+        }
+    }
+
+    a {
+        color: #384250;
+    }
+}
