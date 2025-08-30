@@ -23,8 +23,8 @@
             font-weight: 600;
 
             position: absolute;
-            top: -10px;
-            inset-inline-end: -4px;
+            top: 3px;
+            inset-inline-end: 0;
         }
     }
 
@@ -42,17 +42,23 @@
             &::after {
                 content: none;
             }
+
+            .arrow {
+                align-self: self-start;
+            }
         }
 
         .wrapper {
             position: relative;
 
-            .bg {
-                @include mixins.bg(10, 10, 5, var(--success));
+            img {
+                border-radius: 50%;
+            }
 
+            .bg {
                 position: absolute;
                 bottom: 0;
-                inset-inline-end: 4px;
+                inset-inline-end: 0;
             }
         }
 
@@ -60,7 +66,7 @@
             display: flex;
             flex-direction: column;
             align-items: start;
-            font-size: 0.88rem;
+            font-size: var(--text-sm);
         }
 
         .title {

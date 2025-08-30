@@ -43,7 +43,7 @@
         .wrapper {
             @extend .flex-between;
             margin-bottom: 4px;
-            font-size: 0.88rem;
+            font-size: var(--text-sm);
             color: var(--secondary);
 
             a {
@@ -56,15 +56,12 @@
             width: 100%;
             padding: 11px;
             background-color: var(--success-dark);
-
-            box-shadow: 0px 1px 2px 0px var(--ColorsEffectsShadowsshadow-xs);
-            box-shadow: 0px -2px 0px 0px #0a0d120d inset;
             box-shadow: 0px 0px 0px 1px #0a0d122e inset;
         }
     }
 
     .bg {
         position: relative;
-        background: url("https://picsum.photos/id/11/1000") no-repeat center / cover;
+        background: url("assets/images/login-bg.svg") no-repeat center / cover;
     }
 }

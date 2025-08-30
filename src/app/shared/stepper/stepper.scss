@@ -22,7 +22,7 @@
             height: 2px;
             width: calc(100% - 250px);
 
-            background: url("https://picsum.photos/id/11/1000") no-repeat center / cover;
+            background: url("assets/images/lines.svg") no-repeat center / cover;
         }
     }
 
@@ -34,6 +34,10 @@
             .number {
                 background: var(--white);
                 border: 1px solid #e9eaeb;
+
+                &::after {
+                    content: none;
+                }
             }
         }
 
@@ -46,16 +50,29 @@
 
     .number {
         @include mixins.bg(32, 32, 16, #079455);
-        background: url("https://picsum.photos/id/11/1000") no-repeat center / cover;
+
         color: var(--secondary);
 
-        font-size: 0.88rem;
+        font-size: var(--text-sm);
         font-weight: 600;
+
+        position: relative;
         margin: auto;
+
+        &::after {
+            @extend .absolute-center;
+
+            content: "";
+            background: url("assets/images/icons/check.svg") no-repeat center / cover;
+            z-index: 10;
+
+            width: 100%;
+            height: 100%;
+        }
     }
 
     .title {
-        font-size: 1rem;
+        font-size: var(--text-md);
         font-weight: 600;
         color: var(--secondary);
         margin-block: 16px 2px;

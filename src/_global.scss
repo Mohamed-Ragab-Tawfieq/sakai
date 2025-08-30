@@ -8,6 +8,10 @@
 
     --secondary: #414651;
     --gray: #e9eaeb;
+
+    --text-xs: 0.75rem;
+    --text-sm: 0.88rem;
+    --text-md: 1rem;
 }
 
 @font-face {
@@ -178,7 +182,7 @@ textarea {
 }
 
 .form-label {
-    font-size: 0.88rem;
+    font-size: var(--text-sm);
     font-weight: 500;
 
     display: inline-block;
@@ -215,7 +219,7 @@ table {
     display: block;
     padding: 15px 10px;
     appearance: none;
-    font-size: 1rem;
+    font-size: var(--text-md);
 
     background-color: var(--white);
     background-clip: padding-box;
@@ -231,7 +235,7 @@ table {
     }
 
     &::placeholder {
-        font-size: 0.75rem;
+        font-size: var(--text-xs);
     }
 
     &:-webkit-autofill,
