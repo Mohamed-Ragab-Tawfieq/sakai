@@ -2,6 +2,10 @@
     filter: brightness(0) invert(1);
 }
 
+.info-img {
+    filter: invert(20%) sepia(98%) saturate(2622%) hue-rotate(215deg) brightness(92%) contrast(85%);
+}
+
 .no-filter {
     filter: none !important;
 }

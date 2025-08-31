@@ -7,10 +7,11 @@ import { Filters } from "./shared/filters/filters";
 import { Stepper } from "./shared/stepper/stepper";
 import { Breadcrumb } from './shared/breadcrumb/breadcrumb';
 import { Tabs } from './shared/tabs/tabs';
+import { Alert } from './shared/alert/alert';
 
 @Component({
     selector: 'app-root',
-    imports: [Sidebar, Header, Login, Filters, Stepper, Breadcrumb, Tabs],
+    imports: [Sidebar, Header, Login, Filters, Stepper, Breadcrumb, Tabs, Alert],
     templateUrl: './app.html',
     styleUrl: './app.scss'
 })

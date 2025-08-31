@@ -1,0 +1,15 @@
+<div class="alert {{type}}" role="alert">
+    <div class="bg">
+        @if (type === 'success') {
+        <img src="assets/images/icons/check-3.svg" width="20" alt="">
+        }@else if (type === 'danger') {
+        <img src="assets/images/icons/alert-circle.svg" width="20" alt="">
+        } @else {
+        <img src="assets/images/icons/help-circle.svg" class="info-img" width="20" alt="">
+        }
+    </div>
+    <div>
+        <h3 class="title">Notification/Alert message title </h3>
+        <p class="description">When a Notification/Alert needs a further detailed explanation, it goes here.</p>
+    </div>
+</div>
