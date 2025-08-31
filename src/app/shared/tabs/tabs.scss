@@ -1,0 +1,25 @@
+.grid {
+    border: 1px solid #384250;
+    border-radius: 8px;
+
+    font-size: var(--text-sm);
+    font-weight: 700;
+
+    padding: 8px;
+    margin-block: 36px;
+
+    li {
+        button {
+            text-align: center;
+            width: 100%;
+            padding: 12px;
+            border-radius: 4px;
+            color: #384250;
+
+            &.active {
+                color: var(--white);
+                background-color: var(--success-dark);
+            }
+        }
+    }
+}

@@ -6,10 +6,11 @@ import { Login } from "./features/login/pages/login/login";
 import { Filters } from "./shared/filters/filters";
 import { Stepper } from "./shared/stepper/stepper";
 import { Breadcrumb } from './shared/breadcrumb/breadcrumb';
+import { Tabs } from './shared/tabs/tabs';
 
 @Component({
     selector: 'app-root',
-    imports: [Sidebar, Header, Login, Filters, Stepper, Breadcrumb],
+    imports: [Sidebar, Header, Login, Filters, Stepper, Breadcrumb, Tabs],
     templateUrl: './app.html',
     styleUrl: './app.scss'
 })

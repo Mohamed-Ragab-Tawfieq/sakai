@@ -1,0 +1,38 @@
+<ul class="grid" role="tablist">
+    <li role="presentation">
+        <button [class.active]="step === 1" role="tab" aria-controls="tab-1" (click)="handleStep(1)" [aria-selected]="step === 1 ? true : false">First Tab</button>
+    </li>
+    <li role="presentation">
+        <button [class.active]="step === 2" role="tab" aria-controls="tab-2" (click)="handleStep(2)" [aria-selected]="step === 2 ? true : false">Second Tab</button>
+    </li>
+    <li role="presentation">
+        <button [class.active]="step === 3" role="tab" aria-controls="tab-3" (click)="handleStep(3)" [aria-selected]="step === 3 ? true : false">Third Tab</button>
+    </li>
+    <li role="presentation">
+        <button [class.active]="step === 4" role="tab" aria-controls="tab-4" (click)="handleStep(4)" [aria-selected]="step === 4 ? true : false">Forth Tab</button>
+    </li>
+    <li role="presentation">
+        <button [class.active]="step === 5" role="tab" aria-controls="tab-5" (click)="handleStep(5)" [aria-selected]="step === 5 ? true : false">Fifth Tab</button>
+    </li>
+</ul>
+@if (step === 1) {
+<div class="fade show" role="tabpanel" aria-labelledby="tab-1" tabindex="0">
+    tab-pane 1
+</div>
+} @else if (step === 2) {
+<div class="fade show" role="tabpanel" aria-labelledby="tab-2" tabindex="0">
+    tab-pane 2
+</div>
+} @else if (step === 3) {
+<div class="fade show" role="tabpanel" aria-labelledby="tab-3" tabindex="0">
+    tab-pane 3
+</div>
+} @else if (step === 4) {
+<div class="fade show" role="tabpanel" aria-labelledby="tab-4" tabindex="0">
+    tab-pane 4
+</div>
+} @else {
+<div class="fade show" role="tabpanel" aria-labelledby="tab-5" tabindex="0">
+    tab-pane 5
+</div>
+}
