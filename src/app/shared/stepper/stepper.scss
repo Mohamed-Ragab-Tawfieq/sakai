@@ -8,26 +8,19 @@
     border-radius: 12px;
     text-align: center;
 
-    .wrapper {
-        @extend .flex-center;
+    .item {
         position: relative;
-        width: fit-content;
-        margin: auto;
 
-        &::after {
+        &:not(:last-of-type)::after {
             content: "";
             position: absolute;
             top: 16px;
 
             height: 2px;
-            width: calc(100% - 250px);
+            width: 100%;
 
             background: url("assets/images/lines.svg") no-repeat center / cover;
         }
-    }
-
-    .item {
-        min-width: 252px;
 
         &.active,
         &.active ~ .item {
